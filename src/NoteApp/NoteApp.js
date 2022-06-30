@@ -14,6 +14,8 @@ class NoteApp extends React.Component {
             date: showFormattedDate(),
         };
 
+        const [note, setNote] = useState(this.state.notes);
+
     	// bind
         this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -24,6 +26,12 @@ class NoteApp extends React.Component {
     	this.setState( { notes } );
     }
 
+    onArchiveHandler(id) {
+        const noteArchive = note.notes.findIndex((note) => note.id === id)
+        note.notes[noteArchive].archived;
+        return setNote(noteArchive);
+    }
+
     onAddNoteHandler({ title, description }) {
     	this.setState((prevState) => {
     		return {
@@ -31,7 +39,9 @@ class NoteApp extends React.Component {
     				{
     					id: +new Date(),
     					title,
-    					description
+    					body,
+                        archived: false,
+                        createdAt: new Date().toISOString(),
     				}
     			]
     		}
