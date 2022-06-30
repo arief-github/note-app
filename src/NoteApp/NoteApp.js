@@ -24,8 +24,6 @@ class NoteApp extends React.Component {
     	this.setState( { notes } );
     }
 
-    // on Archive method place here
-
     onAddNoteHandler({ title, description }) {
     	this.setState((prevState) => {
     		return {
