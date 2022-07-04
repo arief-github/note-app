@@ -39,6 +39,12 @@ input::placeholder, textarea::placeholder {
   color: white;
 }
 
+.note-app__header .note-app__searchButton input {
+    border: none;
+    border-bottom: 1px solid var(--main-color-3);
+    border-radius: 0;
+}
+
 
 .note-app__body {
   max-width: 1000px;
