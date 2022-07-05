@@ -25,12 +25,10 @@ class NotesApp extends React.Component {
 	}
 
 	onArchivedHandler(id) {
-		this.setState((prevState) => {
-			notes: prevState.notes.map((note) => note.id === id ? 
-			{
-			...note,
-			archived: !note.archived,
-			} : note)
+	 this.setState((prevState) => {
+			return {
+				notes: prevState.notes.map((note) => note.id === id ? {...note, archived: !note.archived} : note),
+			}
 		})
 	}
 
@@ -39,8 +37,10 @@ class NotesApp extends React.Component {
 		return (
 			<div>
 				<Header/>
-				<NotesActive notes={this.state.notes} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler}/>
-				<NotesArchived notes={this.state.notes} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler}/>
+				<div className='notes-app__body'>
+					<NotesActive notes={this.state.notes} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler}/>
+					<NotesArchived notes={this.state.notes} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler}/>
+				</div>
 				<Footer/>
 			</div>
 		)
