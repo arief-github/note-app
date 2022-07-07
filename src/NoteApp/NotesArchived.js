@@ -7,7 +7,7 @@ const NotesArchived = ({ notes, onDelete, onArchived }) => {
 
     return (
         <div>
-			<h2> Active Notes </h2>
+			<h2> Arhived Notes </h2>
 			{
 				filteredNotes.length === 0 ? (
 					<NotesNotFound/>
@@ -16,7 +16,7 @@ const NotesArchived = ({ notes, onDelete, onArchived }) => {
 				 	{
 				 		filteredNotes.map((note, id) => {
 				 			return (
-				 				<NotesItem key={id} note={note} onDelete={onDelete} onArchived={onArchived} />
+				 				<NotesItem key={id} note={note} onDelete={onDelete} onArchived={onArchived}/>
 				 			);
 				 		})
 				 	}
