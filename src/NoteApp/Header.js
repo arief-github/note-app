@@ -3,9 +3,9 @@ import React from 'react';
 const Header = ( { onSearch } ) => {
 	return (
 		<div className = "note-app__header">
-			<h1>Notes App</h1>
+			<h1> 📔 Notes App</h1>
 			 <div className='note-app__searchButton'>
-                <input type='text' placeholder='Cari catatan ...' onChange={(event) => onSearch(event)} />
+                <input type='text' placeholder='Search note ...' onChange={(event) => onSearch(event)} />
             </div>
 		</div>
 	)

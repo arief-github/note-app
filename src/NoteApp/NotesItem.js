@@ -1,5 +1,6 @@
 import React from 'react';
 import { showFormattedDate } from './data/initialData';
+import { ArchiveIcon, TrashIcon } from '@heroicons/react/solid';
 
 const NotesItem = ({ note, onDelete, onArchived }) => {
 	return (
@@ -10,9 +11,11 @@ const NotesItem = ({ note, onDelete, onArchived }) => {
 				<p className="note-item__body">{note.body}</p>
 			</div>
 			<div className="note-item__action">
-				<button className="note-item__delete-button" onClick={() => onDelete(note.id)}>Delete</button>
+				<button className="note-item__delete-button" onClick={() => onDelete(note.id)}>
+					<TrashIcon className="icon"/> Delete
+				</button>
 				<button className="note-item__archive-button" onClick={() => onArchived(note.id)}>
-					{!note.archived ? 'Archived' : 'Unarchived'}
+					<ArchiveIcon className="icon" /> {!note.archived ? 'Archived' : 'Unarchived'}
 				</button>
 			</div>
 		</div>
