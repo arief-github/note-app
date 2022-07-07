@@ -16,7 +16,7 @@ const NotesArchived = ({ notes, onDelete, onArchived }) => {
 				 	{
 				 		filteredNotes.map((note, id) => {
 				 			return (
-				 				<NotesItem key={id} note={note} onDelete={onDelete} onArchived={onArchived} />
+				 				<NotesItem key={id} note={note} onDelete={onDelete} onArchived={onArchived}/>
 				 			);
 				 		})
 				 	}
