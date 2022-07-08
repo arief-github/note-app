@@ -7,7 +7,7 @@ const NotesArchived = ({ notes, onDelete, onArchived }) => {
 
     return (
         <div>
-			<h2> Arhived Notes </h2>
+			<h2> 📥 Arhived Notes </h2>
 			{
 				filteredNotes.length === 0 ? (
 					<NotesNotFound/>
