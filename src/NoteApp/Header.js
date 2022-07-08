@@ -5,7 +5,7 @@ const Header = ( { onSearch } ) => {
 		<div className = "note-app__header">
 			<h1> 📔 Notes App</h1>
 			 <div className='note-app__searchButton'>
-                <input type='text' placeholder='Search note ...' onChange={(event) => onSearch(event)} />
+                <input type='text' placeholder='🔍 Search note ...' onChange={(event) => onSearch(event)} />
             </div>
 		</div>
 	)

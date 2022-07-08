@@ -7,7 +7,7 @@ const NotesActive = ({ notes, onDelete, onArchived }) => {
 
     return (
         <div>
-			<h2> Active Notes </h2>
+			<h2> 📌 Active Notes </h2>
 			{
 				filteredNotes.length === 0 ? (
 					<NotesNotFound/>

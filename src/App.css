@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +6,14 @@
 }
 
 body {
-    font-family: Poppins, sans-serif;
-    background-color: #efe9e5;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #fff;
     color: #323b43;
+}
+
+h2 {
+    text-align: center;
+    margin: 16px 0;
 }
 
 input,
@@ -17,7 +23,7 @@ textarea {
     font-family: 'Inter', sans-serif;
     background-color: transparent;
     color: #323b43;
-    border: 1px solid #aaa;
+    border: 1px solid black;
     border-radius: 4px;
 }
 
@@ -32,7 +38,7 @@ textarea::placeholder {
     align-items: center;
     justify-content: center;
     padding: 4px 16px;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid black;
 }
 
 .note-app__header h1 {
